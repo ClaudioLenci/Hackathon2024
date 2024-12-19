@@ -1,5 +1,3 @@
-import React from 'react';
-
 export function HomePage() {
   return (
     <div className="font-Noto text-primary-charcoal bg-neutral-white">
