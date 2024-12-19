@@ -3,56 +3,117 @@ import React from 'react';
 export function HomePage() {
   return (
     <div className="font-Noto text-primary-charcoal bg-neutral-white">
-      {/* Header Navigation */}
-      <header className="bg-gradient-to-r from-primary-moonstone to-secondary-green py-4 shadow-md">
-        <div className="container mx-auto px-4 flex justify-between items-center">
-          {/* Logo */}
-          <div className="flex items-center space-x-2">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 24 24"
-              fill="currentColor"
-              className="w-8 h-8 text-neutral-white"
-            >
-              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z" />
-              <circle cx="12" cy="12" r="5" />
-            </svg>
-            <div className="text-neutral-white text-3xl font-extrabold tracking-wide">CarrierLink</div>
-          </div>
+      {/* Spazio per la profondità con ombra */}
+      <div className="h-6 bg-neutral-white shadow-md"></div>
 
-          {/* Navigation */}
-          <nav className="flex items-center space-x-8">
-            <button className="text-neutral-white hover:text-secondary-coral font-medium transition duration-300">Diplomi online</button>
-            <button className="text-neutral-white hover:text-secondary-coral font-medium transition duration-300">Carriere</button>
-            <button className="text-neutral-white hover:text-secondary-coral font-medium transition duration-300">Accedi</button>
-            <button className="bg-neutral-white text-primary-moonstone border border-neutral-white px-5 py-2 rounded-full font-semibold hover:bg-secondary-coral hover:text-neutral-white transition duration-300">
-              Iscriviti gratuitamente
+      {/* Sezione Eroe */}
+      <section className="bg-gradient-to-br from-secondary-green to-primary-moonstone text-neutral-white py-16 shadow-lg relative overflow-hidden">
+        <div className="container mx-auto px-4 flex flex-col md:flex-row items-center relative z-10">
+          <div className="md:w-1/2 text-center md:text-left md:pl-10">
+            <h1 className="text-5xl font-extrabold mb-6 leading-tight text-primary-charcoal">Connetti Studenti e Aziende con CarrierLink</h1>
+            <p className="text-lg mb-8 text-primary-charcoal">Registra le tue competenze e renditi visibile alle aziende. Trova il talento perfetto o scopri opportunità lavorative su misura per te.</p>
+            <button className="bg-neutral-white text-primary-charcoal px-8 py-4 rounded-lg font-semibold hover:bg-neutral-gray-light shadow-lg transition-all duration-300">
+              Registrati ora
             </button>
-          </nav>
+          </div>
+          <div className="md:w-1/2 flex justify-center mt-10 md:mt-0 relative overflow-hidden">
+            {/* Immagine dello studente */}
+            <div className="relative top-2/4 left-1/3">
+              <img
+                src="https://images.vexels.com/media/users/3/139183/isolated/preview/e81136ff89d964e1b8e8e4f7ff63d4cf-ellipse-by-vexels.png"
+                alt="Grafica geometrica"
+                className="w-80 opacity-50 -rotate-12 -z-10"
+              />
+            </div>
+            <img
+              src="https://pngimg.com/uploads/student/student_PNG62539.png"
+              alt="Studente connesso"
+              className="w-1/2 max-w-xs rounded relative z-10"
+            />
+          </div>
         </div>
-      </header>
+        {/* Grafiche dietro l'immagine */}
+      </section>
 
-      {/* Hero Section */}
-      <section className="bg-secondary-green text-neutral-white py-10">
-        <div className="container mx-auto px-4 flex flex-col md:flex-row items-center">
-          <div className="md:w-1/2 text-center md:text-left">
-            <h1 className="text-4xl font-bold mb-4">Accesso illimitato a Migliaia di Opportunità con CarrierLink</h1>
-            <p className="text-lg mb-6">Esplora corsi, progetti pratici e certificazioni per il tuo futuro professionale, tutto incluso nel tuo abbonamento.</p>
-            <button className="bg-primary-moonstone text-neutral-white px-6 py-3 rounded font-semibold hover:bg-primary-charcoal">
-              Inizia la tua prova gratuita oggi
-            </button>
-          </div>
-          <div className="md:w-1/2 flex justify-center mt-6 md:mt-0">
-            <img src="/path-to-your-image.png" alt="Ragazzo sorridente" className="w-3/4 md:w-full rounded" />
+      {/* Sezione Funzionalità */}
+      <section className="py-16 bg-neutral-gray-light">
+        <div className="container mx-auto px-4">
+          <h2 className="text-4xl font-bold text-center mb-10 text-primary-charcoal">Come funziona</h2>
+          <div className="grid md:grid-cols-3 gap-10">
+            <div className="text-center p-6 bg-neutral-white shadow-lg rounded-lg transition-transform hover:scale-105">
+              <img src="https://pluspng.com/img-png/user-png-icon-big-image-png-2240.png" alt="Icona profilo" className="mx-auto mb-4 w-12 h-12" />
+              <h3 className="text-2xl font-semibold mb-4 text-primary-charcoal">Registra il tuo profilo</h3>
+              <p className="text-primary-charcoal">Aggiungi competenze, esperienze e certificazioni al tuo profilo personale.</p>
+            </div>
+            <div className="text-center p-6 bg-neutral-white shadow-lg rounded-lg transition-transform hover:scale-105">
+              <img src="https://cdn-icons-png.flaticon.com/512/69/69846.png" alt="Icona opportunità" className="mx-auto mb-4 w-12 h-12" />
+              <h3 className="text-2xl font-semibold mb-4 text-primary-charcoal">Esplora opportunità</h3>
+              <p className="text-primary-charcoal">Scopri le aziende registrate e trova opportunità che corrispondono al tuo profilo.</p>
+            </div>
+            <div className="text-center p-6 bg-neutral-white shadow-lg rounded-lg transition-transform hover:scale-105">
+              <img src="https://pluspng.com/img-png/star-png-star-icon-1600.png" alt="Icona connessione" className="mx-auto mb-4 w-12 h-12" />
+              <h3 className="text-2xl font-semibold mb-4 text-primary-charcoal">Connetti</h3>
+              <p className="text-primary-charcoal">Ricevi offerte o contatta aziende per iniziare la tua prossima esperienza professionale.</p>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Other sections placeholder */}
-      <section className="py-10">
+      {/* Nuova sezione - 69 competenze */}
+      <section className="py-16 bg-neutral-gray-light">
         <div className="container mx-auto px-4">
-          <h2 className="text-2xl font-bold text-center mb-6">Sezione Placeholder</h2>
-          <p className="text-center">Aggiungi altre sezioni qui...</p>
+          <h2 className="text-4xl font-bold text-center mb-10 text-primary-charcoal">69 Competenze per il tuo successo</h2>
+          <p className="text-lg text-center mb-8 text-primary-charcoal">CarrierLink offre una vasta gamma di competenze per prepararti al meglio al mercato del lavoro. Scopri tutte le aree in cui puoi eccellere.</p>
+          <div className="grid md:grid-cols-3 gap-10">
+            <div className="text-center p-6 bg-neutral-white shadow-lg rounded-lg">
+              <h3 className="text-2xl font-semibold mb-4 text-primary-charcoal">Tecnologia</h3>
+              <p className="text-primary-charcoal">Sviluppo software, analisi dati, sicurezza informatica e molto altro.</p>
+            </div>
+            <div className="text-center p-6 bg-neutral-white shadow-lg rounded-lg">
+              <h3 className="text-2xl font-semibold mb-4 text-primary-charcoal">Business</h3>
+              <p className="text-primary-charcoal">Gestione aziendale, marketing digitale, leadership e strategie di crescita.</p>
+            </div>
+            <div className="text-center p-6 bg-neutral-white shadow-lg rounded-lg">
+              <h3 className="text-2xl font-semibold mb-4 text-primary-charcoal">Creatività</h3>
+              <p className="text-primary-charcoal">Design grafico, scrittura creativa, storytelling visivo e arti multimediali.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Sezione Vantaggi */}
+      <section className="py-16 bg-neutral-white">
+        <div className="container mx-auto px-4">
+          <h2 className="text-4xl font-bold text-center mb-10 text-primary-charcoal">Perché scegliere CarrierLink</h2>
+          <ul className="list-disc list-inside mx-auto max-w-3xl text-primary-charcoal text-lg leading-relaxed">
+            <li className="mb-4">Facilita il matching tra studenti e aziende.</li>
+            <li className="mb-4">Piattaforma intuitiva e sicura.</li>
+            <li className="mb-4">Crea il tuo curriculum digitale con pochi clic.</li>
+          </ul>
+        </div>
+      </section>
+
+      {/* Sezione Recensioni */}
+      <section className="py-16 bg-neutral-gray-light">
+        <div className="container mx-auto px-4">
+          <h2 className="text-4xl font-bold text-center mb-10 text-primary-charcoal">Cosa dicono i nostri utenti</h2>
+          <div className="grid md:grid-cols-3 gap-10">
+            <div className="text-center p-6 bg-neutral-white shadow-lg rounded-lg">
+              <img src="https://c.stocksy.com/a/5i1000/z9/6577.jpg?1564604440" alt="Recensione utente 1" className="mx-auto mb-4 w-20 h-20 rounded-full" />
+              <p className="text-lg text-primary-charcoal italic">“CarrierLink ha trasformato il mio modo di cercare lavoro. Ora sono più visibile alle aziende!”</p>
+              <h4 className="text-xl font-semibold mt-4 text-primary-charcoal">Alessia R.</h4>
+            </div>
+            <div className="text-center p-6 bg-neutral-white shadow-lg rounded-lg">
+              <img src="https://thumbs.dreamstime.com/b/young-woman-park-resting-92113335.jpg" alt="Recensione utente 2" className="mx-auto mb-4 w-20 h-20 rounded-full" />
+              <p className="text-lg text-primary-charcoal italic">“Una piattaforma intuitiva e completa. Ho trovato il lavoro perfetto in pochi clic!”</p>
+              <h4 className="text-xl font-semibold mt-4 text-primary-charcoal">Giulia S.</h4>
+            </div>
+            <div className="text-center p-6 bg-neutral-white shadow-lg rounded-lg">
+              <img src="https://img.freepik.com/premium-photo/hungry-young-african-american-black-man-eating-hamburger-isolated-beige-background-diet-fast-food-concept_255757-10405.jpg" alt="Recensione utente 3" className="mx-auto mb-4 w-20 h-20 rounded-full" />
+              <p className="text-lg text-primary-charcoal italic">“Grazie a CarrierLink ho avuto accesso a stage incredibili. Consigliatissimo!”</p>
+              <h4 className="text-xl font-semibold mt-4 text-primary-charcoal">Marco L.</h4>
+            </div>
+          </div>
         </div>
       </section>
     </div>
