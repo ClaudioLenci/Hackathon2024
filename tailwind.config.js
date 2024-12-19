@@ -13,6 +13,7 @@ export default {
         "primary-charcoal": "#373F51",
         "primary-moonstone": "#58A4B0",
         "secondary-green": "#A7C957",
+        "secondary-blue": "#90D5FF",
         "secondary-coral": "#E07A5F",
         "neutral-white": "#D8DBE2"
       }
