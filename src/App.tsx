@@ -1,6 +1,13 @@
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+
 function App() {
   return (
-    <div className='mt-10 bg-slate-800 h-10 text-white font-Noto'>ciao</div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/"/>
+        <Route path="/user"/>
+      </Routes>
+    </BrowserRouter>
   );
 }
 
