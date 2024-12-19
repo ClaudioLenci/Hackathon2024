@@ -11,7 +11,7 @@ export function Navbar() {
                 <img src={logo} className="h-12"/>
                 <h1 className="font-semibold text-2xl text-black">CareerLink</h1>
             </Link>
-            <div className="flex flex-row items-center justify-between w-full py-4">
+            <div className="flex flex-row items-center justify-between flex-1 py-4">
                 {roots.map((root, index) => (
                     <Link className="text-primary-charcoal" to={root.path} key={index}>{root.page}</Link>
                 ))}
