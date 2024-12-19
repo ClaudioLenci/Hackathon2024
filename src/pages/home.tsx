@@ -59,57 +59,23 @@ export function HomePage() {
         </div>
       </section>
 
-      {/* Nuova sezione - 69 competenze */}
-      <section className="py-16 bg-neutral-gray-light">
-        <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-bold text-center mb-10 text-primary-charcoal">69 Competenze per il tuo successo</h2>
-          <p className="text-lg text-center mb-8 text-primary-charcoal">CarrierLink offre una vasta gamma di competenze per prepararti al meglio al mercato del lavoro. Scopri tutte le aree in cui puoi eccellere.</p>
-          <div className="grid md:grid-cols-3 gap-10">
-            <div className="text-center p-6 bg-neutral-white shadow-lg rounded-lg">
-              <h3 className="text-2xl font-semibold mb-4 text-primary-charcoal">Tecnologia</h3>
-              <p className="text-primary-charcoal">Sviluppo software, analisi dati, sicurezza informatica e molto altro.</p>
-            </div>
-            <div className="text-center p-6 bg-neutral-white shadow-lg rounded-lg">
-              <h3 className="text-2xl font-semibold mb-4 text-primary-charcoal">Business</h3>
-              <p className="text-primary-charcoal">Gestione aziendale, marketing digitale, leadership e strategie di crescita.</p>
-            </div>
-            <div className="text-center p-6 bg-neutral-white shadow-lg rounded-lg">
-              <h3 className="text-2xl font-semibold mb-4 text-primary-charcoal">Creatività</h3>
-              <p className="text-primary-charcoal">Design grafico, scrittura creativa, storytelling visivo e arti multimediali.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Sezione Vantaggi */}
-      <section className="py-16 bg-neutral-white">
-        <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-bold text-center mb-10 text-primary-charcoal">Perché scegliere CarrierLink</h2>
-          <ul className="list-disc list-inside mx-auto max-w-3xl text-primary-charcoal text-lg leading-relaxed">
-            <li className="mb-4">Facilita il matching tra studenti e aziende.</li>
-            <li className="mb-4">Piattaforma intuitiva e sicura.</li>
-            <li className="mb-4">Crea il tuo curriculum digitale con pochi clic.</li>
-          </ul>
-        </div>
-      </section>
-
       {/* Sezione Recensioni */}
-      <section className="py-16 bg-neutral-gray-light">
+      <section className="py-16 bg-gradient-to-br from-secondary-blue via-secondary-green to-secondary-blue shadow-lg">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl font-bold text-center mb-10 text-primary-charcoal">Cosa dicono i nostri utenti</h2>
           <div className="grid md:grid-cols-3 gap-10">
-            <div className="text-center p-6 bg-neutral-white shadow-lg rounded-lg">
-              <img src="https://c.stocksy.com/a/5i1000/z9/6577.jpg?1564604440" alt="Recensione utente 1" className="mx-auto mb-4 w-20 h-20 rounded-full" />
+            <div className="text-center p-6 bg-neutral-white shadow-xl rounded-lg transition-transform hover:scale-105">
+              <img src="https://chinafilminsider.com/wp-content/uploads/2017/08/VCG11425563869-e1502812829653-876x1024.jpg" alt="Recensione utente 1" className="mx-auto mb-4 w-20 h-20 rounded-full object-cover" />
               <p className="text-lg text-primary-charcoal italic">“CarrierLink ha trasformato il mio modo di cercare lavoro. Ora sono più visibile alle aziende!”</p>
-              <h4 className="text-xl font-semibold mt-4 text-primary-charcoal">Alessia R.</h4>
+              <h4 className="text-xl font-semibold mt-4 text-primary-charcoal">Alessio R.</h4>
             </div>
-            <div className="text-center p-6 bg-neutral-white shadow-lg rounded-lg">
-              <img src="https://thumbs.dreamstime.com/b/young-woman-park-resting-92113335.jpg" alt="Recensione utente 2" className="mx-auto mb-4 w-20 h-20 rounded-full" />
+            <div className="text-center p-6 bg-neutral-white shadow-xl rounded-lg transition-transform hover:scale-105">
+              <img src="https://thumbs.dreamstime.com/b/young-woman-park-resting-92113335.jpg" alt="Recensione utente 2" className="mx-auto mb-4 w-20 h-20 rounded-full object-cover" />
               <p className="text-lg text-primary-charcoal italic">“Una piattaforma intuitiva e completa. Ho trovato il lavoro perfetto in pochi clic!”</p>
               <h4 className="text-xl font-semibold mt-4 text-primary-charcoal">Giulia S.</h4>
             </div>
-            <div className="text-center p-6 bg-neutral-white shadow-lg rounded-lg">
-              <img src="https://img.freepik.com/premium-photo/hungry-young-african-american-black-man-eating-hamburger-isolated-beige-background-diet-fast-food-concept_255757-10405.jpg" alt="Recensione utente 3" className="mx-auto mb-4 w-20 h-20 rounded-full" />
+            <div className="text-center p-6 bg-neutral-white shadow-xl rounded-lg transition-transform hover:scale-105">
+              <img src="https://img.freepik.com/premium-photo/hungry-young-african-american-black-man-eating-hamburger-isolated-beige-background-diet-fast-food-concept_255757-10405.jpg" alt="Recensione utente 3" className="mx-auto mb-4 w-20 h-20 rounded-full object-cover" />
               <p className="text-lg text-primary-charcoal italic">“Grazie a CarrierLink ho avuto accesso a stage incredibili. Consigliatissimo!”</p>
               <h4 className="text-xl font-semibold mt-4 text-primary-charcoal">Marco L.</h4>
             </div>
