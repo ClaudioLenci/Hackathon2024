@@ -30,4 +30,4 @@ app.register_blueprint(person_bp, url_prefix='/api/person')
 app.register_blueprint(search_bp, url_prefix='/api/search')
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run()
