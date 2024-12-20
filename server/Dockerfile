@@ -5,9 +5,6 @@ FROM python:3
 # Run in unbuffered mode
 ENV PYTHONUNBUFFERED=1 
 
-# Create and change to the app directory.
-WORKDIR /app
-
 # Copy local code to the container image.
 COPY . ./
 
