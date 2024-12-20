@@ -73,7 +73,7 @@ export function CompanyResearchPage() {
         {/* Risultati delle compagnie */}
         <section>
           <h2 className="text-xl font-semibold text-gray-800 mb-4">🧑‍💼 Aziende Trovate</h2>
-          <div className="space-y-4">
+          <div className="flex flex-col space-y-4">
             {companies.length === 0 ? (
               <p className="text-lg text-gray-600">Nessuna azienda trovata.</p>
             ) : (

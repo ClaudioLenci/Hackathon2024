@@ -5,7 +5,8 @@ export function Navbar() {
     const roots: Array<{page: string, path: string}> = [
         {page: "Aziende", path: "/companies"},
         {page: "Studenti", path: "/students"},
-        {page: "Scuola", path: "/schools"}
+        {page: "Scuola", path: "/schools"},
+        {page: "Ricerca Azienda", path: "/searchCompany"}
     ];
 
     return (
@@ -27,7 +28,7 @@ export function Navbar() {
                     ))}
                 </div>
             </div>
-            <Link to="/login" className="bg-primary-charcoal text-neutral-white rounded-xl py-2 px-4 hover:bg-primary-charcoal-light shadow-lg transition-all">Login</Link>
+            <Link to="/login" className="bg-primary-charcoal text-neutral-white rounded-lg py-2 px-5 hover:bg-primary-charcoal-light shadow-lg transition-all">Login</Link>
         </div>
     );
 }
