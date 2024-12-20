@@ -1,4 +1,5 @@
 from flask import Blueprint, request, jsonify
+from flask_cors import cross_origin
 from sqlalchemy.orm import joinedload
 import sys
 from models.model import Competenza, PersonaCompetenza, Azienda, Persona
@@ -6,6 +7,7 @@ from models.model import Competenza, PersonaCompetenza, Azienda, Persona
 search_bp = Blueprint('search', __name__)
 
 @search_bp.route('/search_students_by_skill/<string:skill_name>', methods=['GET'])
+@cross_origin()
 def search_students_by_skill(skill_name):
     if not skill_name:
         return jsonify({"message": "The skill name is required"}), 400
@@ -39,6 +41,7 @@ def search_students_by_skill(skill_name):
 
 
 @search_bp.route('/search_companies_by_sector/<string:sector_name>', methods=['GET'])
+@cross_origin()
 def search_companies_by_sector(sector_name):
     if not sector_name:
         return jsonify({"message": "The sector name is required"}), 400

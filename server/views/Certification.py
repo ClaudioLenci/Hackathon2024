@@ -1,11 +1,14 @@
 from flask import Blueprint, jsonify, request
 import sys
+
+from flask_cors import cross_origin
 sys.path.insert(1, 'models')
 from models.model import Certificazione
 
 certification_bp = Blueprint('certification', __name__)
 
 @certification_bp.route('/getcertifications', methods=['GET'])
+@cross_origin()
 def get_certifications_list():
     certifications = Certificazione.query.all()
 
@@ -22,6 +25,7 @@ def get_certifications_list():
 
 
 @certification_bp.route('/getcertification/<int:id>', methods=['GET'])
+@cross_origin()
 def get_certification(id):
     certification = Certificazione.query.get(id)
 
