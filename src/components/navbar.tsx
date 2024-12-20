@@ -5,7 +5,7 @@ export function Navbar() {
     const roots: Array<{page: string, path: string}> = [
         {page: "Aziende", path: "/companies"},
         {page: "Studenti", path: "/students"},
-        {page: "Scuola", path: "/school"}
+        {page: "Scuola", path: "/schools"}
     ];
 
     return (
