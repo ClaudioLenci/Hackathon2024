@@ -1,3 +1,5 @@
+import StudentP from "/StudentP.png";
+
 export function HomePage() {
   return (
     <div className="font-Noto text-primary-charcoal bg-neutral-white">
@@ -24,7 +26,7 @@ export function HomePage() {
               />
             </div>
             <img
-              src="https://pngimg.com/uploads/student/student_PNG62539.png"
+              src={StudentP}
               alt="Studente connesso"
               className="w-1/2 max-w-xs rounded relative z-10"
             />
