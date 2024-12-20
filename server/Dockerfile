@@ -16,5 +16,3 @@ EXPOSE 5000
 
 # Comando di default per avviare l'app
 CMD ["python", "app.py"]
-
-
