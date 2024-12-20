@@ -1,7 +1,7 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { Navbar } from "./components/navbar";
 import { HomePage } from "./pages/home";
-import { UserPage } from "./pages/User";
+import { UserPage } from "./pages/user";
 import { LoginPage } from "./pages/login";
 import { Companies } from "./pages/companies";
 import { Schools } from "./pages/schools";
