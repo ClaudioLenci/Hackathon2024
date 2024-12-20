@@ -1,7 +1,6 @@
 from flask import Blueprint, jsonify, request
 import sys
-sys.path.insert(1, 'models')
-from model import db, Persona, Certificazione, Competenza, PersonaCompetenza, PersonaCertificazione
+from models.model import db, Persona, Certificazione, Competenza, PersonaCompetenza, PersonaCertificazione
 from hashing import *
 
 person_bp = Blueprint('person', __name__)

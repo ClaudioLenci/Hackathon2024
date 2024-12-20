@@ -9,11 +9,9 @@ from views.Certification import certification_bp
 from views.Person import person_bp
 from views.Search import search_bp
 import sys
+from models.model import db
 
 load_dotenv()
-
-sys.path.insert(1, 'models')
-from model import db
 
 app = Flask(__name__)
 
@@ -30,4 +28,4 @@ app.register_blueprint(person_bp, url_prefix='/api/person')
 app.register_blueprint(search_bp, url_prefix='/api/search')
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run()

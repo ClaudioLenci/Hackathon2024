@@ -1,7 +1,6 @@
 from flask import Blueprint, jsonify, request
 import sys
-sys.path.insert(1, 'models')
-from model import Competenza
+from models.model import Competenza
 
 skill_bp = Blueprint('skill', __name__)
 
