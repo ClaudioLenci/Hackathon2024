@@ -3,6 +3,7 @@ import { Navbar } from "./components/navbar";
 import { HomePage } from "./pages/home";
 import { UserPage } from "./pages/User";
 import { LoginPage } from "./pages/login";
+import { Companies } from "./pages/companies";
 
 function App() {
   return (
@@ -13,7 +14,7 @@ function App() {
           <Route path="/" element={<HomePage />}/>
           <Route path="/user" element={<UserPage />}/>
           <Route path="/login" element={<LoginPage />}/>
-          <Route path="/companies" element={<LoginPage />}/>
+          <Route path="/companies" element={<Companies />}/>
         </Routes>
       </BrowserRouter>
     </div>
