@@ -13,7 +13,12 @@ export function UserPage() {
 
   const [user, setUser] = useState<User>();
   useEffect(() => {
-    fetch(GetApiLink(`person/getperson/${id}`))
+    fetch(GetApiLink(`person/getperson/${id}`), {
+      headers: {
+        "Content-Type": "application/json",
+      },
+      mode: "no-cors"
+    })
     .then((res) => res.json()
       .then((data) => {
         setUser(data);
@@ -21,19 +26,32 @@ export function UserPage() {
     );
   }, [])
 
-  const [skills, setSkills] = useState<Array<Skill>>();
+  const [skills, setSkills] = useState<Array<Skill>>([]);
   useEffect(() => {
-    fetch(GetApiLink(`person/getskills/${id}`))
+    fetch(GetApiLink(`person/getskills/${id}`), {
+      headers: {
+        "Content-Type": "application/json",
+      },
+      mode: "no-cors"
+    })
     .then((res) => res.json()
-      .then((data) => {
+      .then((data: Array<Skill>) => {
         setSkills(data);
       })
     );
   }, [])
-
-  const [certifications, setCertifications] = useState<Array<Certification>>();
   useEffect(() => {
-    fetch(GetApiLink(`person/getskills/${id}`))
+  console.log(skills)
+  }, [skills])
+  
+  const [certifications, setCertifications] = useState<Array<Certification>>([]);
+  useEffect(() => {
+    fetch(GetApiLink(`person/getskills/${id}`), {
+      headers: {
+        "Content-Type": "application/json",
+      },
+      mode: "no-cors"
+    })
     .then((res) => res.json()
       .then((data) => {
         setCertifications(data);

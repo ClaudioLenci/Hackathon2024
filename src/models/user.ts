@@ -1,6 +1,6 @@
 export type User = {
     Address: string,
-    DateOfBirth: Date,
+    DateOfBirth: string,
     Email: string,
     FirstName: string,
     LastName: string,
