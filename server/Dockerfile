@@ -7,8 +7,8 @@ WORKDIR /app
 # Copia i file richiesti nel container
 COPY . .
 
-# Usa una cache per pip con un ID prefissato dalla chiave "pip"
-RUN --mount=type=cache,id=pip-cache-${BUILD_ID},target=/root/.cache/pip \
+# Usa una cache per pip con un ID prefissato dalla chiave "pip-cache"
+RUN --mount=type=cache,source=pip-cache-${BUILD_ID},target=/root/.cache/pip \
     pip install --no-cache-dir -r requirements.txt
 
 # Espone la porta che usa l'app (ad esempio Flask usa la porta 5000 di default)
