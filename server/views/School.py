@@ -8,6 +8,7 @@ school_bp = Blueprint('school', __name__)
 
 @school_bp.route('/getschools', methods=['GET'])
 def get_schools():
+    print("get_schools")
     schools = Scuola.query.all()
 
     schools_data = []
