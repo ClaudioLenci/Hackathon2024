@@ -16,7 +16,7 @@ export function Companies() {
                         <li>- Soluzioni di promozione personalizzate</li>
                         <li>- Migliora la visibilità del tuo marchio</li>
                     </ul>
-                    <button className="bg-primary-blue text-white px-6 py-3 rounded-md shadow-md hover:bg-blue-700 transition-all">
+                    <button className="bg-primary-blue text-white px-6 py-3 rounded-md shadow-md bg-blue-600 hover:bg-blue-700 transition-all">
                         Inizia ora
                     </button>
                 </div>

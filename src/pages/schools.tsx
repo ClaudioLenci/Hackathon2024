@@ -17,7 +17,7 @@ export function Schools() {
                         <li>- Connettiti con aziende innovative</li>
                         <li>- Maggiore visibilità per la tua scuola</li>
                     </ul>
-                    <button className="bg-primary-blue text-white px-6 py-3 rounded-md shadow-md hover:bg-blue-700 transition-all">
+                    <button className="bg-primary-blue text-white px-6 py-3 rounded-md shadow-md bg-blue-600 hover:bg-blue-700 transition-all">
                         Registrati ora
                     </button>
                 </div>
