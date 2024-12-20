@@ -35,21 +35,22 @@ def get_people_list():
 def get_person(id):
     person = Persona.query.get(id)
 
-    person_id = {
-        'ID_Person': person.ID_Persona,
-        'FirstName': person.Nome,
-        'LastName': person.Cognome,
-        'DateOfBirth': person.DataDiNascita,
-        'Address': person.Indirizzo,
-        'Phone': person.Telefono,
-        'Email': person.Email,
-        'IsExStudent': person.IsExStudente,
-        'GraduationYear': person.AnnoDiploma,
-    }
-
     if person:
-        return jsonify(person_id)
+        person_data = {
+            'ID_Person': person.ID_Persona,
+            'FirstName': person.Nome,
+            'LastName': person.Cognome,
+            'DateOfBirth': person.DataDiNascita,
+            'Address': person.Indirizzo,
+            'Phone': person.Telefono,
+            'Email': person.Email,
+            'IsExStudent': person.IsExStudente,
+            'GraduationYear': person.AnnoDiploma,
+        }
+        return jsonify(person_data)
+    
     return jsonify({"message": "Person not found"}), 404
+
 
 @person_bp.route('/registerperson', methods=['POST'])
 @cross_origin()
