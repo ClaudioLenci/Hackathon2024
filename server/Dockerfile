@@ -14,7 +14,7 @@ COPY . /app/
 RUN pip install --no-cache-dir -r requirements.txt
 
 # Aggiungi un file Procfile per Railway (se necessario)
-RUN echo "web: gunicorn main:app" > Procfile
+RUN echo "web: gunicorn app:app" > Procfile
 
 # Avvia il servizio web all'avvio del container utilizzando gunicorn
-CMD ["gunicorn", "main:app"]
+CMD ["gunicorn", "app:app"]
