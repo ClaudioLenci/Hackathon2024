@@ -57,7 +57,7 @@ def search_companies_by_sector(sector_name):
 
     companies_data = [
         {
-            "Company_id": company.ID_Azienda,
+            "ID_Company": company.ID_Azienda,
             "Name": company.Nome,
             "Address": company.Indirizzo,
             "City": company.Citta,
