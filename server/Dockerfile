@@ -8,6 +8,7 @@ ENV PYTHONUNBUFFERED=1
 # Copy local code to the container image.
 COPY . ./
 
+
 # Install project dependencies
 RUN pip install --no-cache-dir -r requirements.txt
 
