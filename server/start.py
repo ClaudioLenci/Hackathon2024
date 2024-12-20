@@ -17,6 +17,7 @@ def run_app():
     else:
         print("Nessun file app.py trovato.")
         sys.exit(1)
+        
 
 if __name__ == '__main__':
     install_requirements()
