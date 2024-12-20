@@ -82,9 +82,9 @@ export function Schools() {
                     Scegli il piano giusto per la tua scuola
                 </h2>
                 <div className="flex flex-col md:flex-row justify-center gap-8">
-                    {/* Piano Freemium */}
+                    {/* Piano Free */}
                     <div className="bg-white rounded-lg shadow-md p-6 text-center w-full md:w-1/3 border-4 border-[#A7C957]">
-                        <h3 className="text-2xl font-bold text-primary-charcoal mb-4">Piano Freemium</h3>
+                        <h3 className="text-2xl font-bold text-primary-charcoal mb-4">Piano Free</h3>
                         <p className="text-lg text-gray-700 mb-4">Gratuito</p>
                         <ul className="space-y-2 mb-4">
                             <li className="flex items-center justify-center space-x-2">
@@ -97,7 +97,7 @@ export function Schools() {
                             </li>
                         </ul>
                         <button className="border-2 border-[#A7C957] text-[#A7C957] bg-white px-6 py-3 rounded-md shadow-md">
-                            Attiva Freemium
+                            Attiva Free
                         </button>
                     </div>
 
