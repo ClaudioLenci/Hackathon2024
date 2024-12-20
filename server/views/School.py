@@ -1,5 +1,7 @@
 from flask import Blueprint, jsonify, request
 import sys
+
+from flask_cors import cross_origin
 from models.model import Scuola
 from hashing import check_password_hash
 
@@ -7,6 +9,7 @@ school_bp = Blueprint('school', __name__)
 
 
 @school_bp.route('/getschools', methods=['GET'])
+@cross_origin()
 def get_schools():
     print("get_schools")
     schools = Scuola.query.all()
@@ -27,6 +30,7 @@ def get_schools():
 
 
 @school_bp.route('/getschool/<int:id>', methods=['GET'])
+@cross_origin()
 def get_school(id):
     school = Scuola.query.get(id)
 
@@ -45,6 +49,7 @@ def get_school(id):
 
 
 @school_bp.route('/loginschool', methods=['POST'])
+@cross_origin()
 def login_school():
     data = request.get_json()
 

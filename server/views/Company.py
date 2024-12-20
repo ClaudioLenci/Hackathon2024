@@ -1,11 +1,14 @@
 from flask import Blueprint, jsonify, request
 import sys
+
+from flask_cors import cross_origin
 from models.model import Azienda
 from hashing import check_password_hash
 
 company_bp = Blueprint('company', __name__)
 
 @company_bp.route('/getcompanies', methods=['GET'])
+@cross_origin()
 def get_companies_list():
     companies = Azienda.query.all()
 
@@ -26,6 +29,7 @@ def get_companies_list():
 
 
 @company_bp.route('/getcompany/<int:id>', methods=['GET'])
+@cross_origin()
 def get_company(id):
     company = Azienda.query.get(id)
 
@@ -44,6 +48,7 @@ def get_company(id):
     return jsonify({"message": "Company not found"}), 404
 
 @company_bp.route('/logincompany', methods=['POST'])
+@cross_origin()
 def login_company():
     data = request.get_json()
 

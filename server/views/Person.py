@@ -1,5 +1,7 @@
 from flask import Blueprint, jsonify, request
 import sys
+
+from flask_cors import cross_origin
 from models.model import db, Persona, Certificazione, Competenza, PersonaCompetenza, PersonaCertificazione
 from sqlalchemy.orm import joinedload
 from hashing import *
@@ -7,6 +9,7 @@ from hashing import *
 person_bp = Blueprint('person', __name__)
 
 @person_bp.route('/getpeople', methods=['GET'])
+@cross_origin()
 def get_people_list():
     people = Persona.query.all()
 
@@ -28,26 +31,29 @@ def get_people_list():
     return jsonify(people_data)
 
 @person_bp.route('/getperson/<int:id>', methods=['GET'])
+@cross_origin()
 def get_person(id):
     person = Persona.query.get(id)
 
-    person_id = {
-        'ID_Person': person.ID_Persona,
-        'FirstName': person.Nome,
-        'LastName': person.Cognome,
-        'DateOfBirth': person.DataDiNascita,
-        'Address': person.Indirizzo,
-        'Phone': person.Telefono,
-        'Email': person.Email,
-        'IsExStudent': person.IsExStudente,
-        'GraduationYear': person.AnnoDiploma,
-    }
-
     if person:
-        return jsonify(person_id)
+        person_data = {
+            'ID_Person': person.ID_Persona,
+            'FirstName': person.Nome,
+            'LastName': person.Cognome,
+            'DateOfBirth': person.DataDiNascita,
+            'Address': person.Indirizzo,
+            'Phone': person.Telefono,
+            'Email': person.Email,
+            'IsExStudent': person.IsExStudente,
+            'GraduationYear': person.AnnoDiploma,
+        }
+        return jsonify(person_data)
+    
     return jsonify({"message": "Person not found"}), 404
 
+
 @person_bp.route('/registerperson', methods=['POST'])
+@cross_origin()
 def create_person():
     data = request.get_json()
 
@@ -85,6 +91,7 @@ def create_person():
 
 
 @person_bp.route('/loginperson', methods=['POST'])
+@cross_origin()
 def login_person():
     data = request.get_json()
 
@@ -102,6 +109,7 @@ def login_person():
 
 
 @person_bp.route('/addskill', methods=['POST'])
+@cross_origin()
 def add_skill_to_person():
     data = request.get_json()
 
@@ -127,6 +135,7 @@ def add_skill_to_person():
 
 
 @person_bp.route('/addcertificate', methods=['POST'])
+@cross_origin()
 def add_certificate_to_person():
     data = request.get_json()
 
@@ -163,6 +172,7 @@ def add_certificate_to_person():
 
 
 @person_bp.route('/removeskill', methods=['DELETE'])
+@cross_origin()
 def remove_skill_from_person():
     data = request.get_json()
 
@@ -191,6 +201,7 @@ def remove_skill_from_person():
 
 
 @person_bp.route('/removecertificate', methods=['DELETE'])
+@cross_origin()
 def remove_certificate_from_person():
     data = request.get_json()
 
@@ -218,6 +229,7 @@ def remove_certificate_from_person():
     return jsonify({"message": "Certificate removed successfully"}), 200
 
 @person_bp.route('/getskills/<int:id>', methods=['GET'])
+@cross_origin()
 def get_person_skills(id):
     person = Persona.query.get(id)
     if not person:
@@ -245,6 +257,7 @@ def get_person_skills(id):
     return jsonify(person_skills), 200
 
 @person_bp.route('/getcertificates/<int:id>', methods=['GET'])
+@cross_origin()
 def get_person_certificates(id):
     person = Persona.query.get(id)
     if not person:

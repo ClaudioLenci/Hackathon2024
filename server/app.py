@@ -8,6 +8,7 @@ from views.Skill import skill_bp
 from views.Certification import certification_bp
 from views.Person import person_bp
 from views.Search import search_bp
+from views.Sector import sector_bp
 from models.model import db
 
 load_dotenv()
@@ -25,6 +26,7 @@ app.register_blueprint(skill_bp, url_prefix='/api/skill')
 app.register_blueprint(certification_bp, url_prefix='/api/certification')
 app.register_blueprint(person_bp, url_prefix='/api/person')
 app.register_blueprint(search_bp, url_prefix='/api/search')
+app.register_blueprint(sector_bp, url_prefix='/api/sector')
 
 if __name__ == "__main__":
     app.run()

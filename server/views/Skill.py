@@ -1,10 +1,13 @@
 from flask import Blueprint, jsonify, request
 import sys
+
+from flask_cors import cross_origin
 from models.model import Competenza
 
 skill_bp = Blueprint('skill', __name__)
 
 @skill_bp.route('/getskills', methods=['GET'])
+@cross_origin()
 def get_skills_list():
     skills = Competenza.query.all()
 
@@ -21,6 +24,7 @@ def get_skills_list():
 
 
 @skill_bp.route('/getskill/<int:id>', methods=['GET'])
+@cross_origin()
 def get_skill(id):
     skill = Competenza.query.get(id)
 
