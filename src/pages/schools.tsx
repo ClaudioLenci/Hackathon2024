@@ -1,6 +1,6 @@
-import React from "react";
 
-export function Schools() {
+
+export function Schools() { 
     return (
         <div>
             {/* Sezione introduttiva */}
