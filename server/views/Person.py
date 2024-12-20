@@ -1,6 +1,7 @@
 from flask import Blueprint, jsonify, request
 import sys
 from models.model import db, Persona, Certificazione, Competenza, PersonaCompetenza, PersonaCertificazione
+from sqlalchemy.orm import joinedload
 from hashing import *
 
 person_bp = Blueprint('person', __name__)
@@ -215,3 +216,57 @@ def remove_certificate_from_person():
     db.session.commit()
 
     return jsonify({"message": "Certificate removed successfully"}), 200
+
+@person_bp.route('/getskills/<int:id>', methods=['GET'])
+def get_person_skills(id):
+    person = Persona.query.get(id)
+    if not person:
+        return jsonify({"message": "Person not found"}), 404
+
+    skills = (
+        PersonaCompetenza.query
+        .filter_by(ID_Persona=id)
+        .options(joinedload(PersonaCompetenza.competenza))
+        .all()
+    )
+
+    if not skills:
+        return jsonify({"message": "No skills found for this person"}), 404
+
+    person_skills = [
+        {
+            "ID_Skill": skill.competenza.ID_Competenza,
+            "Name": skill.competenza.Nome,
+            "Description": skill.competenza.Descrizione
+        }
+        for skill in skills
+    ]
+
+    return jsonify(person_skills), 200
+
+@person_bp.route('/getcertificates/<int:id>', methods=['GET'])
+def get_person_certificates(id):
+    person = Persona.query.get(id)
+    if not person:
+        return jsonify({"message": "Person not found"}), 404
+
+    certifications = (
+        PersonaCertificazione.query
+        .filter_by(ID_Persona=id)
+        .options(joinedload(PersonaCertificazione.certificazione))
+        .all()
+    )
+
+    if not certifications:
+        return jsonify({"message": "No certification found for this person"}), 404
+
+    person_certifications = [
+        {
+            "ID_Certification": certification.certificazione.ID_Certificazione,
+            "Name": certification.certificazione.Nome,
+            "Description": certification.certificazione.Descrizione
+        }
+        for certification in certifications
+    ]
+
+    return jsonify(person_certifications), 200
