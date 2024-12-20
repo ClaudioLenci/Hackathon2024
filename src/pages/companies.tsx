@@ -81,26 +81,30 @@ export function Companies() {
                     Scegli il piano giusto per la tua azienda
                 </h2>
                 <div className="flex flex-col md:flex-row justify-center gap-8">
-                    {/* Piano Platinum */}
+                    {/* Piano Silver */}
                     <div className="bg-white rounded-lg shadow-md p-6 text-center w-full md:w-1/3 border-4 border-[#A7C957]">
-                        <h3 className="text-2xl font-bold text-primary-charcoal mb-4">Piano Platinum</h3>
-                        <p className="text-lg text-gray-700 mb-4">1100 € / anno</p>
+                        <h3 className="text-2xl font-bold text-primary-charcoal mb-4">Piano Silver</h3>
+                        <p className="text-lg text-gray-700 mb-4">50 € / anno</p>
                         <ul className="space-y-2 mb-4">
                             <li className="flex items-center justify-center space-x-2">
-                                <span className="text-green-600">✔</span>
+                                <span className="text-red-600">✘</span>
                                 <span>Promozione mirata</span>
                             </li>
                             <li className="flex items-center justify-center space-x-2">
-                                <span className="text-green-600">✔</span>
-                                <span>Alta visibilità</span>
+                                <span className="text-red-600">✘</span>
+                                <span>Pubblicità globale</span>
                             </li>
                             <li className="flex items-center justify-center space-x-2">
                                 <span className="text-green-600">✔</span>
                                 <span>Accesso alla rete completa</span>
                             </li>
+                            <li className="flex items-center justify-center space-x-2">
+                                <span className="text-red-600">✘</span>
+                                <span>Partecipazione a corsi di certificazione</span>
+                            </li>
                         </ul>
                         <button className="border-2 border-[#A7C957] text-[#A7C957] bg-white px-6 py-3 rounded-md shadow-md">
-                            Scegli Platinum
+                            Scegli Silver
                         </button>
                     </div>
 
@@ -124,32 +128,40 @@ export function Companies() {
                                 <span className="text-red-600">✘</span>
                                 <span>Alta visibilità</span>
                             </li>
+                            <li className="flex items-center justify-center space-x-2">
+                                <span className="text-red-600">✘</span>
+                                <span>Partecipazione a corsi di certificazione</span>
+                            </li>
                         </ul>
                         <button className="bg-[#A7C957] text-white px-6 py-3 rounded-md shadow-md">
                             Scegli Gold
                         </button>
                     </div>
 
-                    {/* Piano Silver */}
+                    {/* Piano Platinum */}
                     <div className="bg-white rounded-lg shadow-md p-6 text-center w-full md:w-1/3 border-4 border-[#A7C957]">
-                        <h3 className="text-2xl font-bold text-primary-charcoal mb-4">Piano Silver</h3>
-                        <p className="text-lg text-gray-700 mb-4">50 € / anno</p>
+                        <h3 className="text-2xl font-bold text-primary-charcoal mb-4">Piano Platinum</h3>
+                        <p className="text-lg text-gray-700 mb-4">1100 € / anno</p>
                         <ul className="space-y-2 mb-4">
                             <li className="flex items-center justify-center space-x-2">
-                                <span className="text-red-600">✘</span>
+                                <span className="text-green-600">✔</span>
                                 <span>Promozione mirata</span>
                             </li>
                             <li className="flex items-center justify-center space-x-2">
-                                <span className="text-red-600">✘</span>
-                                <span>Pubblicità globale</span>
+                                <span className="text-green-600">✔</span>
+                                <span>Alta visibilità</span>
                             </li>
                             <li className="flex items-center justify-center space-x-2">
                                 <span className="text-green-600">✔</span>
                                 <span>Accesso alla rete completa</span>
                             </li>
+                            <li className="flex items-center justify-center space-x-2">
+                                <span className="text-green-600">✔</span>
+                                <span>Partecipazione a corsi di certificazione</span>
+                            </li>
                         </ul>
                         <button className="border-2 border-[#A7C957] text-[#A7C957] bg-white px-6 py-3 rounded-md shadow-md">
-                            Scegli Silver
+                            Scegli Platinum
                         </button>
                     </div>
                 </div>
