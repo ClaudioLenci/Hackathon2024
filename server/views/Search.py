@@ -37,7 +37,7 @@ def search_students_by_skill(skill_name):
         for association in associations
     ]
 
-    return jsonify({"students": students}), 200
+    return jsonify(students), 200
 
 
 @search_bp.route('/search_companies_by_sector/<string:sector_name>', methods=['GET'])
@@ -57,14 +57,14 @@ def search_companies_by_sector(sector_name):
 
     companies_data = [
         {
-            "company_id": company.ID_Azienda,
-            "name": company.Nome,
-            "address": company.Indirizzo,
-            "city": company.Citta,
-            "phone": company.Telefono,
-            "email": company.Email
+            "Company_id": company.ID_Azienda,
+            "Name": company.Nome,
+            "Address": company.Indirizzo,
+            "City": company.Citta,
+            "Phone": company.Telefono,
+            "Email": company.Email
         }
         for company in companies
     ]
 
-    return jsonify({"companies": companies_data}), 200
+    return jsonify(companies_data), 200
