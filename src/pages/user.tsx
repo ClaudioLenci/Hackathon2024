@@ -17,12 +17,12 @@ export function UserPage() {
       headers: {
         "Content-Type": "application/json",
       },
-      mode: "no-cors"
+      mode: "cors"
     })
-    .then((res) => res.json()
+    .then((res) => {res.json()
       .then((data) => {
         setUser(data);
-      })
+      })}
     );
   }, [])
 
@@ -32,7 +32,7 @@ export function UserPage() {
       headers: {
         "Content-Type": "application/json",
       },
-      mode: "no-cors"
+      mode: "cors"
     })
     .then((res) => res.json()
       .then((data: Array<Skill>) => {
@@ -50,7 +50,7 @@ export function UserPage() {
       headers: {
         "Content-Type": "application/json",
       },
-      mode: "no-cors"
+      mode: "cors"
     })
     .then((res) => res.json()
       .then((data) => {
