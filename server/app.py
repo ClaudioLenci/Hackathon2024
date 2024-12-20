@@ -8,14 +8,13 @@ from views.Skill import skill_bp
 from views.Certification import certification_bp
 from views.Person import person_bp
 from views.Search import search_bp
-import sys
 from models.model import db
 
 load_dotenv()
 
 app = Flask(__name__)
 
-app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv('DATABASE_URL')
+app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv('DATABASE_URL').replace('mysql://', 'mysql+pymysql://')
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 db.init_app(app)

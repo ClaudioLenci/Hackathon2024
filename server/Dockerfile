@@ -1,20 +1,16 @@
-# Usa l'immagine ufficiale di Python
-FROM python:3
+# Usa un'immagine Python leggera
+FROM python:3.11-slim
 
-# Imposta l'ambiente Python in modalità unbuffered (utile per logging in tempo reale)
-ENV PYTHONUNBUFFERED=1 
-
-# Crea la cartella di lavoro all'interno del container
+# Imposta la directory di lavoro nel container
 WORKDIR /app
 
-# Copia il codice locale all'interno del container
-COPY . /app/
+# Copia i file richiesti nel container
+COPY . .
 
-# Installa le dipendenze del progetto
+# Installa le dipendenze senza usare la cache di pip
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Aggiungi un file Procfile per Railway (se necessario)
-RUN echo "web: gunicorn app:app" > Procfile
+# Espone la porta che usa l'app (ad esempio Flask usa la porta 5000 di default)
+EXPOSE 5000
 
-# Avvia il servizio web all'avvio del container utilizzando gunicorn
-CMD ["gunicorn", "app:app"]
+CMD ["gunicorn", "-w", "4", "-b", "0.0.0.0:5000", "app:app"]
