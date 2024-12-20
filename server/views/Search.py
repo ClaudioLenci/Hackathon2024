@@ -62,7 +62,7 @@ def search_companies_by_sector(sector_name):
             "Address": company.Indirizzo,
             "City": company.Citta,
             "Phone": company.Telefono,
-            "Email": company.Email
+            "Email": company.Email,
             "Sector": company.Settore
         }
         for company in companies
