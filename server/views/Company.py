@@ -1,7 +1,6 @@
 from flask import Blueprint, jsonify, request
 import sys
-sys.path.insert(1, 'models')
-from model import Azienda
+from models.model import Azienda
 from hashing import check_password_hash
 
 company_bp = Blueprint('company', __name__)

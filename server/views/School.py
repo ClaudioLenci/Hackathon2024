@@ -1,7 +1,6 @@
 from flask import Blueprint, jsonify, request
 import sys
-sys.path.insert(1, 'models')
-from model import Scuola
+from models.model import Scuola
 from hashing import check_password_hash
 
 school_bp = Blueprint('school', __name__)

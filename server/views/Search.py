@@ -1,8 +1,7 @@
 from flask import Blueprint, request, jsonify
 from sqlalchemy.orm import joinedload
 import sys
-sys.path.insert(1, 'models')
-from model import Competenza, PersonaCompetenza, Azienda, Persona
+from models.model import Competenza, PersonaCompetenza, Azienda, Persona
 
 search_bp = Blueprint('search', __name__)
 

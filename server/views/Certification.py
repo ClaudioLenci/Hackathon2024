@@ -1,7 +1,7 @@
 from flask import Blueprint, jsonify, request
 import sys
 sys.path.insert(1, 'models')
-from model import Certificazione
+from models.model import Certificazione
 
 certification_bp = Blueprint('certification', __name__)
 
